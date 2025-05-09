@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>North Carolina Counties Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 600px; width: 100%; }
+  </style>
+</head>
+<body>
+  <h3>North Carolina Counties Map</h3>
+  <div id="map"></div>
+
+  <script 
+    src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([35.5, -79.8], 7);
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Load the county links JSON
+    fetch('nc_county_links_cleaned.json')
+      .then(response => response.json())
+      .then(countyLinks => {
+        // Load the GeoJSON data
+        fetch('nc_counties.geojson')
+          .then(response => response.json())
+          .then(geojsonData => {
+            // Add GeoJSON layer to the map
+            L.geoJSON(geojsonData, {
+              onEachFeature: function (feature, layer) {
+                const countyName = feature.properties.NAME;
+                const links = countyLinks[countyName];
+                let popupContent = `<strong>${countyName} County</strong>`;
+                if (links && links.length > 0) {
+                  popupContent += "<ul>";
+                  links.forEach(url => {
+                    popupContent += `<li><a href="${url}" target="_blank">${url}</a></li>`;
+                  });
+                  popupContent += "</ul>";
+                } else {
+                  popupContent += "<p>No links available.</p>";
+                }
+                layer.bindPopup(popupContent);
+              }
+            }).addTo(map);
+          });
+      });
+  </script>
+</body>
+</html>
