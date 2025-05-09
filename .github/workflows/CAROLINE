@@ -4,9 +4,7 @@
   <title>NC Counties Interactive Map</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     #map { height: 600px; width: 100%; }
   </style>
@@ -18,45 +16,39 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
     const map = L.map('map').setView([35.5, -79.8], 7);
-
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 10,
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Load county links JSON
-    fetch('nc_county_links_combined.json')
-      .then(response => response.json())
-      .then(countyLinks => {
-        // Load GeoJSON data
-        fetch('nc_counties.geojson') // Make sure you have this file
-          .then(response => response.json())
-          .then(geojson => {
-            L.geoJSON(geojson, {
-              onEachFeature: function (feature, layer) {
-                const county = feature.properties.NAME;
-                const links = countyLinks[county];
-                let popupContent = `<strong>${county} County</strong>`;
-                if (links && links.length) {
-                  popupContent += '<ul>';
-                  links.forEach(url => {
-                    popupContent += `<li><a href="${url}" target="_blank">${url}</a></li>`;
-                  });
-                  popupContent += '</ul>';
-                } else {
-                  popupContent += '<p>No links available.</p>';
-                }
-                layer.bindPopup(popupContent);
-              },
-              style: {
-                color: "#555",
-                weight: 1,
-                fillColor: "#ccc",
-                fillOpacity: 0.6
-              }
-            }).addTo(map);
-          });
-      });
+    Promise.all([
+      fetch('nc_county_links_combined.json').then(res => res.json()),
+      fetch('nc_counties.geojson').then(res => res.json())
+    ]).then(([countyLinks, geojson]) => {
+      L.geoJSON(geojson, {
+        onEachFeature: function (feature, layer) {
+          const county = feature.properties.NAME;
+          const links = countyLinks[county];
+          let popupContent = `<strong>${county} County</strong>`;
+          if (links && links.length) {
+            popupContent += '<ul>';
+            links.forEach(url => {
+              popupContent += `<li><a href="${url}" target="_blank">${url}</a></li>`;
+            });
+            popupContent += '</ul>';
+          } else {
+            popupContent += '<p>No links available.</p>';
+          }
+          layer.bindPopup(popupContent);
+        },
+        style: {
+          color: "#555",
+          weight: 1,
+          fillColor: "#ccc",
+          fillOpacity: 0.6
+        }
+      }).addTo(map);
+    });
   </script>
 </body>
 </html>
