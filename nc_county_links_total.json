@@ -23,6 +23,66 @@
     "https://www.co.anson.nc.us/252/GIS-Data-Downloads",
     "https://www.bttaxpayerportal.com/itspublican/TaxBillSearch"
   ],
+  "Ashe" : [
+    "https://www.ashecountygov.com/",
+    "https://www.ashencrod.org/Opening.asp",
+    "https://gis.ashecountygov.com/maps/",
+    "https://ashecountytax.com/#/"
+  ],
+  "Avery" : [
+    "https://www.averycountync.gov/",
+    "https://www.averydeeds.com/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=7c399996997242bdbf2a0bf5c18e3a2a",
+    "https://secure.webtaxpay.com/?county=avery&state=NC"
+  ],
+  "Bertie" : [
+    "http://www.co.bertie.nc.us/",
+    "https://search.bertiedeeds.com/",
+    "https://www.arcgis.com/apps/webappviewer/index.html?id=6b7b91023ce84d778d1a207f75fe0454",
+    "https://secure.webtaxpay.com/?county=bertie&state=NC"
+  ],
+  "Bladen" : [
+    "https://bladennc.govoffice3.com/",
+    "https://www.bladenncrod.org/",
+    "https://gis.bladenco.org/",
+    "https://bladen.ustaxdata.com/Search.cfm"
+  ],
+  "Brunswick" : [
+    "https://www.brunswickcountync.gov/",
+    "https://rod.brunsco.net/",
+    "https://rod.brunsco.net/",
+    "https://tax.brunsco.net/ITSNet/"
+  ],
+  "Buncombe" : [
+    "https://www.buncombecounty.org/",
+    "https://registerofdeeds.buncombecounty.org/External/LandRecords/protected/v4/SrchName.aspx",
+    "https://gis.buncombecounty.org/buncomap/",
+    "https://tax.buncombecounty.org/"
+  ],
+  "Burke" : [
+    "https://www.burkenc.org/",
+    "https://us5.courthousecomputersystems.com/BurkeNC2/",
+    "https://gis.burkenc.org/",
+    "https://burkenctax.com/#/"
+  ],
+  "Caldwell" : [
+    "https://www.caldwellcountync.org/",
+    "https://caldwellrod.org/",
+    "https://gis.caldwellcountync.org/maps/",
+    "https://caldwellcountynctax.com/#/"
+  ],
+  "Cabarrus" : [
+    "https://www.cabarruscounty.us/Home",
+    "https://www.cabarrusncrod.org/",
+    "https://www.cabarruscounty.us/Government/Departments/GIS",
+    "https://tax.cabarruscounty.us/"
+  ], 
+  "Translyvania" : [
+    "https://www.transylvaniacounty.org/",
+    "https://search.transylvaniadeeds.com/",
+    "https://gis.transylvaniacounty.org/portal/apps/sites/#/transylvania-county-hub-site/apps/072e71230d03460898f502e66961d5cf/explore",
+    "https://www.transylvaniacounty.org/departments/tax-administration"
+  ],
   "Camden": [
     "https://www.camdencountync.gov/",
     "http://72.15.246.187/CamdenNC/",
