@@ -1,0 +1,26 @@
+{
+  "Alamance": [
+    "https://cotthosting.com/NCALAMANCEEXTERNAL/User/Login.aspx?ReturnUrl=%2fNCALAMANCEExternal",
+    "https://alamancecountync.gov/",
+    "https://apps.alamance-nc.com/CountyGISMap/default.aspx",
+    "https://alamance.ustaxdata.com/"
+  ],
+  "Alexander": [
+    "https://alexandercountync.gov/",
+    "https://alexandercountync.gov/rod/",
+    "https://alexandercountync.gov/departments/gis/",
+    "https://alexander.ustaxdata.com/"
+  ],
+  "Alleghany": [
+    "https://alleghanycounty-nc.gov/",
+    "https://www.alleghanyrod.org/",
+    "https://www.webgis.net/nc/Alleghany/",
+    "https://alleghanycounty-nc.gov/index.php/tax-office/"
+  ],
+  "Anson": [
+    "https://www.co.anson.nc.us/",
+    "https://www.ansonncrod.org/",
+    "https://www.co.anson.nc.us/252/GIS-Data-Downloads",
+    "https://www.bttaxpayerportal.com/itspublican/TaxBillSearch"
+  ]
+}
