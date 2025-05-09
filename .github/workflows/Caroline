@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NC Counties Interactive Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 600px; width: 100%; }
+  </style>
+</head>
+<body>
+  <h3>North Carolina Counties Interactive Map</h3>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([35.5, -79.8], 7);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Load county links JSON
+    fetch('nc_county_links_combined.json')
+      .then(response => response.json())
+      .then(countyLinks => {
+        // Load GeoJSON data
+        fetch('nc_counties.geojson') // Make sure you have this file
+          .then(response => response.json())
+          .then(geojson => {
+            L.geoJSON(geojson, {
+              onEachFeature: function (feature, layer) {
+                const county = feature.properties.NAME;
+                const links = countyLinks[county];
+                let popupContent = `<strong>${county} County</strong>`;
+                if (links && links.length) {
+                  popupContent += '<ul>';
+                  links.forEach(url => {
+                    popupContent += `<li><a href="${url}" target="_blank">${url}</a></li>`;
+                  });
+                  popupContent += '</ul>';
+                } else {
+                  popupContent += '<p>No links available.</p>';
+                }
+                layer.bindPopup(popupContent);
+              },
+              style: {
+                color: "#555",
+                weight: 1,
+                fillColor: "#ccc",
+                fillOpacity: 0.6
+              }
+            }).addTo(map);
+          });
+      });
+  </script>
+</body>
+</html># This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
