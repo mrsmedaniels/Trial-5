@@ -25,7 +25,7 @@
     }).addTo(map);
 
     // Load county links JSON
-    fetch('nc_county_links_combined.json')
+    fetch('nc_county_links_total.json')
       .then(response => response.json())
       .then(countyLinks => {
         // Load GeoJSON data
@@ -59,6 +59,539 @@
       });
   </script>
 </body>
+
+{
+  "Alamance": [
+    "https://cotthosting.com/NCALAMANCEEXTERNAL/User/Login.aspx?ReturnUrl=%2fNCALAMANCEExternal",
+    "https://alamancecountync.gov/",
+    "https://apps.alamance-nc.com/CountyGISMap/default.aspx",
+    "https://alamance.ustaxdata.com/"
+  ],
+  "Alexander": [
+    "https://alexandercountync.gov/",
+    "https://alexandercountync.gov/rod/",
+    "https://alexandercountync.gov/departments/gis/",
+    "https://alexander.ustaxdata.com/"
+  ],
+  "Alleghany": [
+    "https://alleghanycounty-nc.gov/",
+    "https://www.alleghanyrod.org/",
+    "https://www.webgis.net/nc/Alleghany/",
+    "https://alleghanycounty-nc.gov/index.php/tax-office/"
+  ],
+  "Anson": [
+    "https://www.co.anson.nc.us/",
+    "https://www.ansonncrod.org/",
+    "https://www.co.anson.nc.us/252/GIS-Data-Downloads",
+    "https://www.bttaxpayerportal.com/itspublican/TaxBillSearch"
+  ],
+  "Camden": [
+    "https://www.camdencountync.gov/",
+    "http://72.15.246.187/CamdenNC/",
+    "https://maps.roktech.net/rokmaps_Camden/"
+  ],
+  "Carteret": [
+    "https://www.carteretcountync.gov/",
+    "https://deeds.carteretcountync.gov/",
+    "https://arcgisweb.carteretcountync.gov/maps/",
+    "https://carteretcountytax.com/#/"
+  ],
+  "Caswell": [
+    "https://www.caswellcountync.gov/",
+    "https://www.caswellrod.net/",
+    "https://www.webgis.net/nc/caswell/"
+  ],
+  "Catawba": [
+    "https://www.catawbacountync.gov/",
+    "https://catawbarod.org/",
+    "https://gis.catawbacountync.gov/parcel/"
+  ],
+  "Chatham": [
+    "https://www.chathamcountync.gov/",
+    "https://www.chathamncrod.org/",
+    "https://chathamncgis.maps.arcgis.com/home/index.html",
+    "https://chathamnc.devnetwedge.com/"
+  ],
+  "Cherokee": [
+    "https://www.cherokeecounty-nc.gov/",
+    "https://www.cherokeencrod.org/",
+    "https://www.cherokeecounty-nc.gov/197/Interactive-Map-Viewer",
+    "https://www.cherokeecounty-nc.gov/298/Property-Tax-Information"
+  ],
+  "Chowan": [
+    "https://www.chowancounty-nc.gov/",
+    "http://72.15.246.186/ChowanNCNW/application.asp",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=dc1c3a48141744c1a123bcad4e5cef50",
+    "http://taxonline.chowancountync.email/itsnet/RealEstate.aspx"
+  ],
+  "Clay": [
+    "https://www.clayconc.com/",
+    "https://search.claydeeds.com/",
+    "https://tax.claync.us/gis-mapping",
+    "https://tax.claync.us/"
+  ],
+  "Cleveland": [
+    "https://www.clevelandcounty.com/main/",
+    "http://72.15.246.187/clevelandnc/",
+    "https://www.webgis.net/nc/Cleveland/",
+    "https://www.clevelandcountytaxes.com/#/"
+  ],
+  "Columbus": [
+    "https://www.columbusco.org/",
+    "https://www.columbusdeeds.com/",
+    "https://mangomap.com/columbusmis/maps/16952/land-records-#",
+    "https://www.columbusco.org/Departments/Tax-Office"
+  ],
+  "Craven": [
+    "https://www.cravencountync.gov/",
+    "https://www.cravencountync.gov/303/Register-of-Deeds",
+    "https://gis.cravencountync.gov/maps/",
+    "https://www.bttaxpayerportal.com/ITSPublicCR/TaxBillSearch"
+  ],
+  "Cumberland": [
+    "https://www.co.cumberland.nc.us/",
+    "https://www.ccrod.org/",
+    "https://cumberlandgis.maps.arcgis.com/apps/webappviewer/index.html?id=a6ea68995c2349e9a177366288589be7",
+    "https://taxpwa.co.cumberland.nc.us/publicwebaccess/"
+  ],
+  "Currituck": [
+    "https://www.statewidetitle.com/registers.asp?county=Currituck"
+  ],
+  "Dare": [
+    "https://www.darenc.gov/",
+    "https://www.courthousecomputersystems.com/darenc/",
+    "https://maps.darecountync.gov/",
+    "https://www.darenc.gov/departments/tax-department"
+  ],
+  "Davidson": [
+    "https://www.co.davidson.nc.us/",
+    "https://davidsondeeds.com/search/davidsonNameSearch.php",
+    "https://webgis.co.davidson.nc.us/",
+    "https://taxsearch.co.davidson.nc.us/"
+  ],
+  "Davie": [
+    "https://www.daviecountync.gov/",
+    "https://www.daviencrod.org/",
+    "https://www.daviecountync.gov/322/GIS",
+    "https://www.daviecountync.gov/103/Tax-Administration"
+  ],
+  "Duplin": [
+    "https://www.duplincountync.com/",
+    "https://www.duplinrod.com/",
+    "https://gis.duplincountync.com/",
+    "https://www.duplincountync.com/tax-department/"
+  ],
+  "Durham": [
+    "https://www.dconc.gov/",
+    "https://rodweb.dconc.gov/web/user/disclaimer",
+    "https://www.durhamnc.gov/1455/Interactive-Maps",
+    "https://taxcama.dconc.gov/camapwa/"
+  ],
+  "Edgecombe": [
+    "https://www.edgecombecountync.gov/",
+    "https://cotthosting.com/ncedgecombeexternal/User/Login.aspx?ReturnUrl=/ncedgecombeexternal/",
+    "https://gis.edgecombecountync.gov/maps/default.htm",
+    "https://taxpa.edgecombecountync.gov/paas/"
+  ],
+  "Forsyth": [
+    "https://www.co.forsyth.nc.us/",
+    "https://www.forsythdeeds.com/disclaimer.php",
+    "https://www.forsyth.cc/tax/geodata.aspx",
+    "https://www.forsyth.cc/tax/geodata.aspx"
+  ],
+  "Franklin": [
+    "https://www.franklincountync.gov/",
+    "http://72.15.246.186/franklinnc/",
+    "https://www.franklincountync.gov/county_services/tax_gis/index.php",
+    "https://www.franklincountync.gov/county_services/tax_gis/index.php"
+  ],
+  "Gaston": [
+    "https://www.gastongov.com/",
+    "https://deeds.gastongov.com/external/LandRecords/protected/v4/SrchName.aspx",
+    "https://gis.gastongov.com/",
+    "https://gastonnc.devnetwedge.com/"
+  ],
+  "Gates": [
+    "https://gatescountync.gov/",
+    "https://www.gatesrod.net/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=5140b9aee17143cda7e51801b085f10d"
+  ],
+  "Graham": [
+    "https://www.grahamcounty.org/",
+    "https://cotthosting.com/ncgraham/LandRecords/protected/v4/SrchName.aspx",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=561a20cc33894cb98ff18aa6925af254",
+    "https://grahamcounty.org/"
+  ],
+  "Granville": [
+    "https://www.granvillecounty.org/",
+    "http://www.granvillecountydeeds.org/External/LandRecords/protected/v4/SrchName.aspx",
+    "https://granville-county-granvillecounty.hub.arcgis.com/"
+  ],
+  "Greene": [
+    "http://www.co.greene.nc.us/",
+    "https://cotthosting.com/ncgreeneexternal/User/Login.aspx?ReturnUrl=%2fncgreeneexternal%2f",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=336dd11e889546b7806dded487e3fc57",
+    "https://greenecounty.munisselfservice.com/citizens/default.aspx"
+  ],
+  "Guilford": [
+    "https://www.guilfordcountync.gov/",
+    "https://www.guilfordcountync.gov/",
+    "https://gisdv.guilfordcountync.gov/guilford/",
+    "https://www.guilfordcountync.gov/our-county/tax/online-tax-services"
+  ],
+  "Halifax": [
+    "https://www.halifaxnc.com/",
+    "https://cotthosting.com/NCHALIFAXEXTERNAL/User/Login.aspx?ReturnUrl=%2fNCHALIFAXEXTERNAL",
+    "https://halifaxnctax.com//#",
+    "https://halifaxnctax.com//#"
+  ],
+  "Harnett": [
+    "https://www.harnett.org/",
+    "https://us6.courthousecomputersystems.com/HarnettNC/",
+    "https://gis.harnett.org/gisviewer/",
+    "https://www.harnett.org/tax/"
+  ],
+  "Haywood": [
+    "https://www.haywoodcountync.gov/",
+    "https://www.haywoodcountync.gov/",
+    "https://www.haywoodcountync.gov/203/Land-Records-Geographic-Information-Serv",
+    "https://www.haywoodcountync.gov/272/Tax-Administration"
+  ],
+  "Henderson": [
+    "https://www.hendersoncountync.gov/",
+    "https://www.hendersoncountync.gov/rd",
+    "https://henderson.roktech.net/gomaps4/?mapName=All%20Layers",
+    "https://bcpwa.ncptscloud.com/hendersontax/"
+  ],
+  "Hertford": [
+    "https://www.hertfordcountync.gov/",
+    "https://www.hertfordrod.net/",
+    "https://hertfordcountync.maps.arcgis.com/home/index.html",
+    "https://lrcpwa.ncptscloud.com/Hertford/"
+  ],
+  "Hoke": [
+    "https://www.hokecounty.net/",
+    "https://hokencrod.org/",
+    "https://maps.hokecounty.org/maps/",
+    "https://hokecountytaxes.munisselfservice.com/citizens/default.aspx"
+  ],
+  "Hyde": [
+    "https://www.hydecountync.gov/",
+    "https://www.hyderod.net/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=4ee8283fa9114430a31cb573a30ab04d",
+    "https://bcpwa.ncptscloud.com/hydetax/BillSearchResults.aspx?ClickItem=NewSearch"
+  ],
+  "Iredell": [
+    "https://www.iredellcountync.gov/",
+    "https://cotthosting.com/NCIredellExternal/User/Login.aspx",
+    "https://iredellcountync.mapgeo.io/datasets/properties?abuttersDistance=100&latlng=35.782018%2C-80.88281&modal=disclaimer",
+    "https://taxweb.iredellcountync.gov/PublicAccess/RealEstate.aspx"
+  ],
+  "Jackson": [
+    "https://www.jacksonnc.org/",
+    "https://deeds.jacksonnc.org/External/LandRecords/protected/v4/SrchName.aspx",
+    "https://jacksonnctax.com/taxes.html#/"
+  ],
+  "Johnston": [
+    "https://www.johnstonnc.gov/",
+    "https://erec.johnstonnc.com/recorder/web/",
+    "https://www.johnstonnc.gov/gis2/",
+    "https://www.johnstonnc.gov/tax2/"
+  ],
+  "Jones": [
+    "http://www.co.jones.nc.us/",
+    "https://jonescountync.gov/departments/register-of-deeds/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=1a75ffe4b94c46748cd14c475ffc94ad",
+    "https://www.bttaxpayerportal.com/ITSPublicJN2.0/TaxBillSearch"
+  ],
+  "Lee": [
+    "https://leecountync.gov/",
+    "https://www.leencrod.org/Opening.asp",
+    "https://lee-arcgis.leecountync.gov/parcelmap/",
+    "https://leecountync.munisselfservice.com/citizens/RealEstate/default.aspx"
+  ],
+  "Lenoir": [
+    "https://lenoircountync.gov/",
+    "https://lenoircountync.gov/register-of-deeds/",
+    "https://lenoirco.maps.arcgis.com/apps/webappviewer/index.html?id=68c0618065d04f1182fb86cb5b6647de",
+    "https://www.lenoircountytaxes.com/#/"
+  ],
+  "Lincoln": [
+    "https://www.lincolncountync.gov/",
+    "https://us4.courthousecomputersystems.com/LincolnNC2/",
+    "https://www.lincolncountync.gov/289/GIS",
+    "https://www.lincolncountytax.com/#/"
+  ],
+  "Macon": [
+    "https://gis.maconnc.org/www.maconnc.org/",
+    "https://www.macondeeds.com/",
+    "https://gis2.maconnc.org/lightmap/Maps/default.htm"
+  ],
+  "Madison": [
+    "https://www.madisoncountync.gov/",
+    "https://www.madisonrod.net/",
+    "https://experience.arcgis.com/experience/2333843dc4584e648a98fb9542dc75fe/",
+    "https://bcpwa.ncptscloud.com/madisontax/"
+  ],
+  "Martin": [
+    "https://www.martincountyncgov.com/",
+    "https://www.martinrod.org/",
+    "https://gis.martincountyncgov.com/",
+    "https://www.martincountyncgov.com/taxSearch/default.aspx"
+  ],
+  "McDowell": [
+    "https://www.mcdowellgov.com/",
+    "https://search.mcdowelldeeds.com/#overlay-context=node/3",
+    "https://www.webgis.net/nc/McDowell/",
+    "https://mcdowellnctax.com/#/"
+  ],
+  "Mecklenburg": [
+    "https://www.mecknc.gov/",
+    "https://meckrod.manatron.com/",
+    "https://polaris3g.mecklenburgcountync.gov/",
+    "https://taxbill.co.mecklenburg.nc.us/publicwebaccess/"
+  ],
+  "Mitchell": [
+    "http://www.mitchellcounty.org/",
+    "https://www.mitchelldeeds.com/",
+    "http://mapping.mitchellcounty.org/",
+    "http://nc-mitchell-assessor.governmax.com/propertymax/rover30.asp"
+  ],
+  "Montgomery": [
+    "https://www.montgomerycountync.gov/",
+    "https://www.montgomeryrod.net/",
+    "https://www.webgis.net/nc/montgomery/"
+  ],
+  "Moore": [
+    "https://www.moorecountync.gov/",
+    "https://rod.moorecountync.gov/default.aspx",
+    "https://www.moorecountync.gov/265/IT-GIS#mapping",
+    "https://www.moorecountync.gov/202/Tax"
+  ],
+  "Nash": [
+    "https://www.nashcountync.gov/",
+    "https://cotthosting.com/NCNashExternal/LandRecords/protected/v4/SrchName.aspx",
+    "https://gis.nashcountync.gov/mapviewer/",
+    "https://nashcountync.munisselfservice.com/"
+  ],
+  "New Hanover": [
+    "https://www.nhcgov.com/",
+    "https://registerofdeeds.nhcgov.com/436/Records-Search",
+    "https://www.nhcgov.com/844/GIS-Maps-Data",
+    "https://newhanovercountynccss.munisselfservice.com/citizens/RealEstate/Default.aspx?mode=new"
+  ],
+  "Northampton": [
+    "https://www.northamptonnc.com/",
+    "https://northamptonrod.org/",
+    "https://webapp.agdmaps.com/nc/northampton/",
+    "https://northamptonnctax.com/#/"
+  ],
+  "Onslow": [
+    "https://www.onslowcountync.gov/",
+    "https://deeds.onslowcountync.gov/External/LandRecords/protected/v4/SrchName.aspx",
+    "https://gismaps.onslowcountync.gov/maps/",
+    "https://tax.onslowcountync.gov/ITSPublicON/TaxBillSearch"
+  ],
+  "Orange": [
+    "https://www.orangecountync.gov/",
+    "https://rod.orangecountync.gov/orangenc/",
+    "https://gis.orangecountync.gov/orangeNCGIS/default.htm",
+    "https://web.orangecountync.gov/publicwebaccess/"
+  ],
+  "Pamlico": [
+    "https://www.pamlicocounty.org/",
+    "https://cotthosting.com/NCPAMLICOEXTERNAL/LandRecords/protected/v4/SrchName.aspx",
+    "https://webapp.agdmaps.com/nc/pamlico/",
+    "https://vdsinc.com/bill-lookup/?instance-id=pamlico-tax#top"
+  ],
+  "Pasquotank": [
+    "https://www.pasquotankcountync.org/",
+    "https://www.pasquotankrod.net/",
+    "https://www.pasquotankcountync.org/gis-office",
+    "https://www.pasquotankcountync.org/tax-office"
+  ],
+  "Pender": [
+    "https://pendercountync.gov/",
+    "http://72.15.246.187/pendernc/",
+    "https://gis.pendercountync.gov/maps/",
+    "https://www.pendercountync.gov/txc/"
+  ],
+  "Perquimans": [
+    "https://www.perquimanscountync.gov/",
+    "https://www.perquimansrod.us/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=559506e85ee046a194333eb12e80710f",
+    "https://www.perquimanscountync.gov/departments/tax-administrator"
+  ],
+  "Person": [
+    "https://www.personcountync.gov/",
+    "https://www.personrod.net/",
+    "https://gis.personcountync.gov/",
+    "https://www.bttaxpayerportal.com/ITSPublicPR/TaxBillSearch"
+  ],
+  "Pitt": [
+    "https://www.pittcountync.gov/",
+    "https://regdeeds.pittcountync.gov/External/User/Login.aspx?ReturnUrl=%2fExternal%2fLandRecords%2fprotected%2fSrchQuickName.aspx",
+    "https://gis.pittcountync.gov/opis/",
+    "https://property.spatialest.com/nc/pitt/#/"
+  ],
+  "Polk": [
+    "https://www.polknc.gov/",
+    "https://www.polknc.gov/register_of_deeds.php",
+    "https://www.polknc.gov/quick_links/gomaps_gis/index.php#.Um6Bw1O5jPk",
+    "https://www.polknc.gov/tax_search/"
+  ],
+  "Randolph": [
+    "https://www.randolphcountync.gov/",
+    "https://us4.courthousecomputersystems.com/RandolphNC2",
+    "https://www.randolphcountync.gov/255/GIS",
+    "http://txpwa.co.randolph.nc.us/publicwebaccess/"
+  ],
+  "Richmond": [
+    "https://www.richmondnc.com/",
+    "https://www.richmondrod.net/",
+    "https://gis3.richmondnc.com/portal/home/",
+    "https://www.richmondnctax.com/OnlinePayments#/"
+  ],
+  "Robeson": [
+    "https://www.robesoncountync.gov/",
+    "https://robeson.bislandrecords.com/",
+    "https://maps.roktech.net/ROKMAPS_Robeson/",
+    "https://www.ustaxdata.com/nc/robeson/robesonsearch.cfm"
+  ],
+  "Rockingham": [
+    "https://www.rockinghamcountync.gov/",
+    "https://www.courthousecomputersystems.com/RockinghamNC/",
+    "https://www.webgis.net/nc/Rockingham/",
+    "https://www.ustaxdata.com/nc/rockingham/disclaimer.cfm"
+  ],
+  "Rowan": [
+    "https://www.rowancountync.gov/",
+    "https://rod.rowancountync.gov/external/User/Login.aspx",
+    "https://gis.rowancountync.gov/gismaps/",
+    "https://tax.rowancountync.gov/search/commonsearch.aspx?mode=realprop"
+  ],
+  "Rutherford": [
+    "https://www.rutherfordcountync.gov/",
+    "https://www.rutherfordcountync.gov/departments/register_of_deeds/index.php",
+    "https://gis.rutherfordcountync.gov/maps/",
+    "https://www.rutherfordcountync.gov/tax_search/index.php#/"
+  ],
+  "Sampson": [
+    "https://www.sampsoncountync.gov/Home",
+    "https://www.sampsonrod.org/",
+    "https://www.arcgis.com/apps/webappviewer/index.html?id=eda58e00176642daac341dc621ae3519&extent=-8854494.0204%2C4079109.8677%2C-8560975.8318%2C4217766.637%2C102100",
+    "https://sampsonlandrecords.com/PT/forms/htmlframe.aspx?mode=content/home.htm"
+  ],
+  "Scotland": [
+    "https://www.scotlandcounty.org/",
+    "https://www.scotlandcounty.org/391/Disclaimer",
+    "http://laurinburg.connectgis.com/Disclaimer.aspx",
+    "https://www.scotlandcountytaxes.com/#/"
+  ],
+  "Stanly": [
+    "https://www.stanlycountync.gov/",
+    "https://www.stanlyrod.net/",
+    "https://stanlycounty.maps.arcgis.com/apps/webappviewer/index.html?id=195ae28fc5454875a5cc60eb8b28bbf6",
+    "https://www.stanlytax.com/taxes#/"
+  ],
+  "Stokes": [
+    "https://www.co.stokes.nc.us/",
+    "https://www.stokescorod.org/",
+    "https://www.stokescountygis.com/",
+    "https://www.stokescountytax.com/#/"
+  ],
+  "Surry": [
+    "https://www.co.surry.nc.us/",
+    "https://www.co.surry.nc.us/departments/%28k_through_z%29/register_of_deeds/public_search.php",
+    "http://gis.surryinfo.net/maps/",
+    "https://www.co.surry.nc.us/departments/tax/index.php"
+  ],
+  "Swain": [
+    "https://www.swaincountync.gov/",
+    "https://www.swaincorod.org/",
+    "https://maps.roktech.net/ROKMAPS_swain/",
+    "http://216.109.220.17/itspublicsw"
+  ],
+  "Translyvania": [
+    "https://www.transylvaniacounty.org/",
+    "https://search.transylvaniadeeds.com/",
+    "https://gis.transylvaniacounty.org/portal/apps/sites/#/transylvania-county-hub-site/apps/072e71230d03460898f502e66961d5cf/explore",
+    "https://www.transylvaniacounty.org/departments/tax-administration"
+  ],
+  "Tyrrell": [
+    "http://tyrrellcounty.org/en/",
+    "https://tyrrellrod.net/",
+    "https://agdonline.maps.arcgis.com/apps/webappviewer/index.html?id=1c2493cb8eb1484eb1ecc571131f5ee6"
+  ],
+  "Union": [
+    "https://www.unioncountync.gov/",
+    "https://www.unionconcrod.org/Opening.asp",
+    "https://gisweb1.unioncountync.gov/gomaps/",
+    "https://unionnc.devnetwedge.com/"
+  ],
+  "Vance": [
+    "https://www.vancecounty.org/",
+    "https://vancencrod.org/",
+    "https://vc-gis.maps.arcgis.com/apps/instant/sidebar/index.html?appid=b784ca1b2bd1462bbd4d7d0b01c4fcc9",
+    "https://vance.ustaxdata.com/"
+  ],
+  "Wake": [
+    "https://vance.ustaxdata.com/",
+    "https://www.wake.gov/",
+    "https://www.wake.gov/departments-government/register-deeds",
+    "https://maps.raleighnc.gov/iMAPS/index.html",
+    "https://services.wake.gov/realestate/"
+  ],
+  "Warren": [
+    "https://www.warrencountync.com/",
+    "https://www.warrenrod.org/opening.asp",
+    "https://maps.roktech.net/ROKMAPS_Warren/",
+    "https://secure.webtaxpay.com/index.php?site=full&county=warren&state=NC"
+  ],
+  "Washington": [
+    "https://washconc.org/",
+    "https://www.washingtonrod.net/",
+    "https://washconc.maps.arcgis.com/apps/webappviewer/index.html?id=1a51e666286842138be02492cab0ec95",
+    "http://taxweb.washconc.org/"
+  ],
+  "Watauga": [
+    "https://www.wataugacounty.org/",
+    "http://72.15.246.185/watauganc/",
+    "https://tax.watgov.org/WataugaNC/maps/mapadv.aspx",
+    "https://tax.watgov.org/WataugaNC/Search/Disclaimer.aspx?FromUrl=../search/commonsearch.aspx?mode=owner"
+  ],
+  "Wayne": [
+    "https://www.waynegov.com/",
+    "https://www.waynegov.com/",
+    "https://rod.waynegov.com/External/LandRecords/protected/v4/SrchName.aspx",
+    "https://experience.arcgis.com/experience/ecbb6edfbe18416cbfe76f5876470202/",
+    "https://pwa.waynegov.com/publicwebaccess/"
+  ],
+  "Wilkes": [
+    "https://www.wilkescounty.net/",
+    "https://www.wilkesncrod.org/",
+    "https://gis.wilkescounty.net/maps/",
+    "https://www.wilkescounty.net/545/Pay-Taxes"
+  ],
+  "Wilson": [
+    "https://www.wilsoncountync.gov/",
+    "https://rod.wilson-co.com/External/User/Login.aspx?ReturnUrl=%2fExternal%2f",
+    "https://www.wilsoncountync.gov/departments/technology-services/gis-services",
+    "https://wilsonnc.devnetwedge.com/"
+  ],
+  "Yadkin": [
+    "https://www.yadkincountync.gov/",
+    "https://www.yadkincorod.org/Opening.asp",
+    "https://gis.yadkincountync.gov/",
+    "https://www.bttaxpayerportal.com/ITSPublicYK/TaxBillSearch"
+  ],
+  "Yancey": [
+    "https://www.yanceycountync.gov/",
+    "https://search.yanceydeeds.com/index.php",
+    "https://gis.yanceycountync.org/maps/",
+    "https://secure.webtaxpay.com/?county=yancey&state=NC"
+  ]
+}
 </html># This is a basic workflow to help you get started with Actions
 
 name: CI
